@@ -16,4 +16,28 @@ export const handlers = [
             ])
         )
     }),
+    rest.get('/fakeApi/posts', (req, res, ctx) => {
+        return res(
+            ctx.delay(1000),
+            ctx.status(200),
+            ctx.json([
+                {
+                    id: uniqueID(),
+                    postText: 'Post text here!',
+                    author: 'Mike',
+                },
+                {
+                    id: uniqueID(),
+                    postText: '2Post text here!',
+                    author: 'Mason',
+                },
+
+                {
+                    id: uniqueID(),
+                    postText: '3Post text here!',
+                    author: 'John',
+                },
+            ])
+        )
+    }),
 ]

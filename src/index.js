@@ -6,8 +6,11 @@ import store from './store'
 import { ReduxCounter } from './components/ReduxCounter/ReduxCounter'
 import { ToDoList } from './features/todos/ToDoList/ToDoList'
 // import { DataGetting } from './components/DataGetting/DataGetting'
+import { PostList } from './features/posts/PostList'
+
 /* eslint-disable */
 import { worker } from './mocks/browser'
+
 if (process.env.NODE_ENV === 'development') {
     worker.start().then(data => data)
 }
@@ -19,5 +22,6 @@ root.render(
         <ReduxCounter />
         {/*<DataGetting />*/}
         <ToDoList />
+        <PostList />
     </Provider>
 )
