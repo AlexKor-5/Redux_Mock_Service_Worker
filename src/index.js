@@ -4,10 +4,10 @@ import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
 import store from './store'
 import { ReduxCounter } from './components/ReduxCounter/ReduxCounter'
+import { ToDoList } from './features/todos/ToDoList/ToDoList'
 // import { DataGetting } from './components/DataGetting/DataGetting'
 /* eslint-disable */
 import { worker } from './mocks/browser'
-import { ToDoList } from './features/todos/ToDoList/ToDoList'
 if (process.env.NODE_ENV === 'development') {
     worker.start().then(data => data)
 }
