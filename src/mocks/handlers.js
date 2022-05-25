@@ -40,4 +40,7 @@ export const handlers = [
             ])
         )
     }),
+    rest.post('/fakeApi/posts', (req, res, ctx) => {
+        return res(ctx.delay(2000), ctx.status(200))
+    }),
 ]

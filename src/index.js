@@ -7,7 +7,7 @@ import { ReduxCounter } from './components/ReduxCounter/ReduxCounter'
 import { ToDoList } from './features/todos/ToDoList/ToDoList'
 // import { DataGetting } from './components/DataGetting/DataGetting'
 import { PostList } from './features/posts/PostList'
-
+import { AddPostForm } from './features/posts/AddPostForm'
 /* eslint-disable */
 import { worker } from './mocks/browser'
 
@@ -23,5 +23,6 @@ root.render(
         {/*<DataGetting />*/}
         <ToDoList />
         <PostList />
+        <AddPostForm />
     </Provider>
 )

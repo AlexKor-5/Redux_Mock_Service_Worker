@@ -13,8 +13,15 @@ export const apiSlice = createApi({
             // The URL for the request is '/fakeApi/posts'
             query: () => '/posts',
         }),
+        addNewPost: builder.mutation({
+            query: initialPost => ({
+                url: '/posts',
+                method: 'POST',
+                body: initialPost,
+            }),
+        }),
     }),
 })
 
 // Export the auto-generated hook for the `getPosts` query endpoint
-export const { useGetPostsQuery } = apiSlice
+export const { useGetPostsQuery, useAddNewPostMutation } = apiSlice
