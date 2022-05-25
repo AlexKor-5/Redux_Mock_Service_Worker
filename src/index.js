@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client'
 // import { Counter } from "./components/Counter/Counter";
 import { Provider } from 'react-redux'
 import store from './store'
-import { ReduxCounter } from './components/ReduxCounter/ReduxCounter'
-import { ToDoList } from './features/todos/ToDoList/ToDoList'
+// import { ReduxCounter } from './components/ReduxCounter/ReduxCounter'
+// import { ToDoList } from './features/todos/ToDoList/ToDoList'
 // import { DataGetting } from './components/DataGetting/DataGetting'
 import { PostList } from './features/posts/PostList'
 import { AddPostForm } from './features/posts/AddPostForm'
@@ -19,9 +19,9 @@ if (process.env.NODE_ENV === 'development') {
 const root = ReactDOM.createRoot(document.querySelector('#container'))
 root.render(
     <Provider store={store}>
-        <ReduxCounter />
+        {/*<ReduxCounter />*/}
         {/*<DataGetting />*/}
-        <ToDoList />
+        {/*<ToDoList />*/}
         <PostList />
         <AddPostForm />
     </Provider>

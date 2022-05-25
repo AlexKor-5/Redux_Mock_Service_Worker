@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useGetPostsQuery } from '../api/apiSlice'
 
 const PostExcerpt = ({ post }) => {
@@ -13,7 +13,8 @@ const PostExcerpt = ({ post }) => {
 }
 
 export const PostList = () => {
-    const { data: posts = [], isLoading, isSuccess, isError, error } = useGetPostsQuery()
+    const [skip, setSkip] = useState(true)
+    const { data: posts = [], isLoading, isSuccess, isError, error } = useGetPostsQuery({ skip })
 
     let content
 
@@ -33,8 +34,9 @@ export const PostList = () => {
     }
 
     return (
-        <div>
+        <div style={{ border: '2px solid red' }}>
             <h2>Posts:</h2>
+            <button onClick={() => setSkip(prev => !prev)}>Fetch it</button>
             {content}
         </div>
     )
