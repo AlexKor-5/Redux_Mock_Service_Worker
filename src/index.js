@@ -8,6 +8,7 @@ import store from './store'
 // import { DataGetting } from './components/DataGetting/DataGetting'
 import { PostList } from './features/posts/PostList'
 import { AddPostForm } from './features/posts/AddPostForm'
+
 /* eslint-disable */
 import { worker } from './mocks/browser'
 

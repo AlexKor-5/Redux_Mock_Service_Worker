@@ -14,7 +14,13 @@ const PostExcerpt = ({ post }) => {
 
 export const PostList = () => {
     const [skip, setSkip] = useState(true)
-    const { data: posts = [], isLoading, isSuccess, isError, error } = useGetPostsQuery({ skip })
+    const {
+        data: posts = [],
+        isLoading,
+        isSuccess,
+        isError,
+        error,
+    } = useGetPostsQuery(undefined, { skip })
 
     let content
 
